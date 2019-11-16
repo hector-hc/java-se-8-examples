@@ -9,6 +9,7 @@
     <modules>
         <module>java-se-8-dates-examples</module>
         <module>java-se-8-concurrency-examples</module>
+        <module>java-se-8-bootcamp</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
