@@ -60,7 +60,7 @@ public class ClassNumberTwo {
             case 10:
                 System.out.println("Tienes 10 años");
                 break;
-            case 20:
+            case 8:
                 System.out.println("Tienes 20 años");
                 break;
             default:
