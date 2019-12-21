@@ -15,5 +15,11 @@ public class StudentMain {
 		Person student = new Student("Pedro");
 		
 		System.out.println("" + student.getDescription());
+		
+		System.out.println("es igual? " + student.equals("Pedro"));
+		
+		
+		System.out.println(student);
+		System.out.println(student.toString());
 	}
 }

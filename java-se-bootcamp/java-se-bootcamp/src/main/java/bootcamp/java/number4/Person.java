@@ -9,7 +9,7 @@ package bootcamp.java.number4;
  * @author hector.hernandez
  * @Version 1.0
  */
-public abstract class Person {
+public abstract class Person extends Object {
 	
 	private String name;
 	
