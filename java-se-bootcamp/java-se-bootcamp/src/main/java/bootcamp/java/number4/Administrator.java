@@ -15,9 +15,9 @@ public class Administrator extends Employee {
 
 	private double commission;
 	
-	public Administrator() {
+	/*public Administrator() {
 		
-	}
+	}*/
 	
 	public Administrator(String name, double salary, LocalDate hiringDate) {
 		super(name, salary, hiringDate);

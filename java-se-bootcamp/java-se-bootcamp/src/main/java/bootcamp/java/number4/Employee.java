@@ -11,14 +11,14 @@ import java.time.LocalDate;
  * @author hector.hernandez
  * @Version 1.0
  */
-public class Employee {
+public class Employee extends Object {
 
 	private String name;
 	private double salary;
 	private LocalDate hiringDate;
 	
-	public Employee() {
-	}
+	/*public Employee() {
+	}*/
 	
 	/**
 	 * @param name
@@ -69,4 +69,8 @@ public class Employee {
 		this.hiringDate = hiringDate;
 	}
 	
+	@Override
+	public String toString() {
+		return "Name=" + this.name + ", Salary=" + this.salary + ", hiringDate=" + this.hiringDate;
+	}
 }
