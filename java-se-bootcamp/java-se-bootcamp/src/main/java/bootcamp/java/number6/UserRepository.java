@@ -11,10 +11,14 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Stream;
 
 /**
  * @author hector.hernandez
@@ -64,7 +68,8 @@ public class UserRepository {
 		} catch (IOException ioe) {
 			System.out.println("Error al leer archivos");
 		}*/
-		try (Scanner tokenizingScanner = new Scanner(new FileReader("/Users/Hector/Documents/javabootcamp/users.txt"))) {
+		
+		/*try (Scanner tokenizingScanner = new Scanner(new FileReader("/Users/Hector/Documents/javabootcamp/users.txt"))) {
 			tokenizingScanner.useDelimiter("\\n");
 			while (tokenizingScanner.hasNext()) {
 				String line = tokenizingScanner.next();
@@ -80,6 +85,23 @@ public class UserRepository {
 				
 				users.add(user);
 			}
+		} catch (IOException ioe) {
+			System.out.println("Error al leer los usuarios");
+		}*/
+		try (Stream<String> stream = Files.lines(Paths.get("/Users/Hector/Documents/javabootcamp/users.txt"))) {
+			stream.forEach(line -> {
+				String[] fields = line.split("\\|");
+				User user = null;
+				try {
+					
+					user = new User(Long.valueOf(fields[0]), fields[1], Short.valueOf(fields[2]));
+					
+				} catch (IllegalArgumentException iae) {
+					System.out.println("error " + iae.getMessage());
+				}
+				
+				users.add(user);
+			});
 		} catch (IOException ioe) {
 			System.out.println("Error al leer los usuarios");
 		}

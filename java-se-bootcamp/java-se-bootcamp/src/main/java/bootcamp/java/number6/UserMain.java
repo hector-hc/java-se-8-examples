@@ -20,7 +20,7 @@ public class UserMain {
 
 	public static void main(String[] ars) {
 		
-		//UserRepository userRepository = new UserRepository();
+		UserRepository userRepository = new UserRepository();
 		//userRepository.addUser(new User(1L, "Hector", (short) 34));
 		/*try {
 			User user = userRepository.findByName("josue");
@@ -33,11 +33,12 @@ public class UserMain {
 		}*/
 		
 		// Get All Users
-		//List<User> users = userRepository.getAll();
+		List<User> users = userRepository.getAll();
 		
-		/*for (User user : users) {
+		for (User user : users) {
 			System.out.println(user);
-		}*/
+		}
+		
 		
 		//users.stream().forEach(System.out::println);
 		
@@ -72,12 +73,12 @@ public class UserMain {
                 e.printStackTrace();
         }*/
 		
-		Path pathSource = Paths.get("/Users/Hector/Documents/javabootcamp/move/users.txt");
+		/*Path pathSource = Paths.get("/Users/Hector/Documents/javabootcamp/move/users.txt");
         try {
                 Files.delete(pathSource);
                 System.out.println("File deleted successfully");
         } catch (IOException e) {
                 e.printStackTrace();
-        }
+        }*/
 	}
 }
