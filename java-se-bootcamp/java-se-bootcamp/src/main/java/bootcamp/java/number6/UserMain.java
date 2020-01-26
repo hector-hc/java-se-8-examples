@@ -39,7 +39,6 @@ public class UserMain {
 			System.out.println(user);
 		}
 		
-		
 		//users.stream().forEach(System.out::println);
 		
 		//User userNew = new User(14L, "Carmen", (short) 36);

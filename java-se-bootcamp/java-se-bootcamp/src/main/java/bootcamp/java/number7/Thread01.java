@@ -5,6 +5,8 @@
  */
 package bootcamp.java.number7;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -16,11 +18,21 @@ public class Thread01 {
 		System.out.println("Hola");
 		System.out.println("nombre de hilo: " + Thread.currentThread().getName());
 		
+		List<Double> list = new ArrayList();
+		list.add(23.5);
 		
 		//ThreadExample thread = new ThreadExample();
 		//thread.start();
 		
+		//MyTask task = new MyTask();
+		
+		//Thread t = new Thread(task);
+		//t.start();
+		
 		//MyRunnable mr = new MyRunnable();
+		
+		//Thread t = new Thread(new MyTask());
+		//t.start();
 		
 		/*Thread r = new Thread(new Runnable() {
 			
@@ -40,32 +52,32 @@ public class Thread01 {
 
 		
 		
-		Thread t = new Thread(() -> {
+		/*Thread t = new Thread(() -> {
 			try {
 				//Thread.sleep(5000);
-				TimeUnit.SECONDS.sleep(1);
+				TimeUnit.SECONDS.sleep(5);
 				System.out.println("Estado: " + Thread.currentThread().getState());
 			} catch (InterruptedException ie) {
 				ie.printStackTrace();
 			}
 			System.out.println("Termino el proceso: " + Thread.currentThread().getName());
-		});
+		});*/
 		//t.setPriority(9);
 		
 		
-		t.start();
+		//t.start();
 		
 		
-		/*new Thread(() -> {
+		new Thread(() -> {
 			try {
 				Thread.sleep(5000);
 			} catch (InterruptedException ie) {
 				ie.printStackTrace();
 			}
 			System.out.println("Termino el proceso: " + Thread.currentThread().getName());
-		}).start();*/
+		}).start();
 		
-		System.out.println("fin");
+		//System.out.println("fin");
 		
 		
 		//ThreadExample thread1 = new ThreadExample();
@@ -73,9 +85,9 @@ public class Thread01 {
 		
 		
 		//Car car = new Car();
-		User user = new User(() -> {
+		/*User user = new User(() -> {
 			
 		});
-		System.out.println("OK");
+		System.out.println("OK");*/
 	}
 }

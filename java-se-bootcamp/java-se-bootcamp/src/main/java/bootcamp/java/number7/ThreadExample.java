@@ -13,6 +13,8 @@ public class ThreadExample extends Thread {
 
 	@Override
 	public void run() {
+		Thread.currentThread().setName("HiloQueCalculaAlgo");
+		System.out.println("Estado del hilo" + Thread.currentThread().getState());
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException ie) {
