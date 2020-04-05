@@ -18,7 +18,7 @@ public class ZonedDateTimeTwoPlaces {
         System.out.println("zdtLocal: " + zdtLocal);
         ZonedDateTime zdtParis = zdtLocal.withZoneSameInstant(ZoneId.of("Europe/Paris"));
         System.out.println("zdtParis: " + zdtParis);
-        ZonedDateTime zdtLocalMx = zdtParis.withZoneSameInstant(ZoneId.of("America/Mexico_City"));
-        System.out.println("zdtLocalMx: " + zdtLocalMx);
+        /*ZonedDateTime zdtLocalMx = zdtParis.withZoneSameInstant(ZoneId.of("America/Mexico_City"));
+        System.out.println("zdtLocalMx: " + zdtLocalMx);*/
     }
 }

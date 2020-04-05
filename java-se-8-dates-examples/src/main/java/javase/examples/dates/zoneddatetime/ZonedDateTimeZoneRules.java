@@ -13,7 +13,7 @@ import java.time.ZonedDateTime;
  */
 public class ZonedDateTimeZoneRules {
     public static void main(String args[]) {
-        ZonedDateTime zTotalityZonedDateTime = ZonedDateTime.now();
+        ZonedDateTime zTotalityZonedDateTime = ZonedDateTime.of(2020, 5, 15, 0, 0, 0, 0, ZoneId.of("America/Mexico_City"));
         ZoneId mexicoCity = ZoneId.of("America/Mexico_City");
         System.out.println("isDaylightSavings: " + mexicoCity.getRules()
                 .isDaylightSavings(zTotalityZonedDateTime.toInstant()));
